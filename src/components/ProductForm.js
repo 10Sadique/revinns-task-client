@@ -19,7 +19,7 @@ const ProductForm = ({ setTotalCount, setTotalQuan }) => {
         queryKey: ['product', productId],
         queryFn: async () => {
             const res = await fetch(
-                `http://localhost:5000/products/${productId}`
+                `https://revinns-task-server.vercel.app/products/${productId}`
             );
             const data = await res.json();
             return data;
@@ -38,7 +38,7 @@ const ProductForm = ({ setTotalCount, setTotalQuan }) => {
     // handle delete product
     const handleDelete = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:5000/products/${productId}`, {
+        fetch(`https://revinns-task-server.vercel.app/products/${productId}`, {
             method: 'DELETE',
         })
             .then((res) => res.json())

@@ -12,7 +12,7 @@ const AddProduct = () => {
         const product = { productId, desc, price };
 
         // sending data to the server
-        fetch(`http://localhost:5000/products`, {
+        fetch(`https://revinns-task-server.vercel.app/products`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
