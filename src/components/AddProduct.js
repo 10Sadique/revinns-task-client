@@ -21,13 +21,13 @@ const AddProduct = () => {
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 if (data.acknowledged) {
                     toast.success('Product Added Successfully');
                     e.target.reset();
                 }
                 if (data.acknowledged === false) {
-                    toast.error('Product Already Exists');
+                    toast.error('Invalid Id');
                     e.target.reset();
                 }
             });
